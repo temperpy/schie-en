@@ -7,20 +7,79 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="diagram-container">
-        <img src="Tagberg. Gundelsdorf 2.png" alt="Diagramm 1">
-        <img src="Schützenfreunde Burgheim 1.png" alt="Diagramm 2">
-        <img src="Enzian Sehensand 1.png" alt="Diagramm 3">
-        <img src="Tell Hollenbach 1.png" alt="Diagramm 4">
-        <img src="Edelweiß Reicherstein 1.png" alt="Diagramm 5">
-        <img src="Birkenlaub Klingsmoos 1.png" alt="Diagramm 6">
-        <img src="Alt-Baring Bergen 1.png" alt="Diagramm 7">
-        <img src="Winterlust Staudheim 2.png" alt="Diagramm 8">
-        <img src="Friedrich, Torsten.png" alt="Diagramm 9">
-        <img src="Habermeyer, Peter.png" alt="Diagramm 10">
-        <img src="Pettmesser, Martin.png" alt="Diagramm 11">
-        <img src="Wöhr, Birgit.png" alt="Diagramm 12">
-        <!-- <img src="Bild.png" alt="Diagramm 1"> -->
+  <div id="navbar">
+    <a class="nav-link" data-target="home">Home</a>
+    <a class="nav-link" data-target="gauoberliga-a1">Gauoberliga A1</a>
+    <a class="nav-link" data-target="a-klasse-3">A Klasse 3</a>
+    <a class="nav-link" data-target="enzian-sehensand-1">Enzian Sehensand 1</a>
+    <a class="nav-link" data-target="enzian-sehensand-2">Enzian Sehensand 2</a>
+  </div>
+
+  <div id="content">
+    <div id="home" class="content-section">Herzlich Willkommen, wähle eine Klasse.</div>
+    <div id="gauoberliga-a1" class="content-section" style="display:none;">
+        <!-- Deine Diagramme für Gauoberliga A1 -->
+        <img src="diagramme/Tagberg. Gundelsdorf 2.png" alt="Diagramm 1">
+        <img src="diagramme/Schützenfreunde Burgheim 1.png" alt="Diagramm 2">
+        <img src="diagramme/Enzian Sehensand 1.png" alt="Diagramm 3">
+        <img src="diagramme/Tell Hollenbach 1.png" alt="Diagramm 4">
+        <img src="diagramme/Edelweiß Reicherstein 1.png" alt="Diagramm 5">
+        <img src="diagramme/Birkenlaub Klingsmoos 1.png" alt="Diagramm 6">
+        <img src="diagramme/Alt-Baring Bergen 1.png" alt="Diagramm 7">
+        <img src="diagramme/Winterlust Staudheim 2.png" alt="Diagramm 8">
     </div>
+    <div id="a-klasse-3" class="content-section" style="display:none;">
+        <!-- Deine Diagramme für A Klasse 3 -->
+        <img src="diagramme/Enzian Sehensand 2.png" alt="Diagramm 9">
+        <img src="diagramme/Obermaxfeld 1.png" alt="Diagramm 10">
+        <img src="diagramme/Gemütlichkeit Holzkirchen 1.png" alt="Diagramm 11">
+        <img src="diagramme/Juraschützen Hütting 3.png" alt="Diagramm 12">
+        <img src="diagramme/Eichenlaub Unterstall 5.png" alt="Diagramm 13">
+        <img src="diagramme/Auerhahn Walda 3.png" alt="Diagramm 14">
+    </div>
+    <div id="enzian-sehensand-1" class="content-section" style="display:none;">
+        <!-- Deine Diagramme für Enzian Sehensand 1 -->
+        <img src="diagramme/Friedrich, Torsten.png" alt="Diagramm 15">
+        <img src="diagramme/Habermeyer, Peter.png" alt="Diagramm 16">
+        <img src="diagramme/Pettmesser, Martin.png" alt="Diagramm 17">
+        <img src="diagramme/Wöhr, Birgit.png" alt="Diagramm 18">
+    </div>
+    <div id="enzian-sehensand-2" class="content-section" style="display:none;">
+        <!-- Deine Diagramme für Enzian Sehensand 2 -->
+        <img src="diagramme/Wöhr, Kira.png" alt="Diagramm 19">
+        <img src="diagramme/Friedrich, Kim.png" alt="Diagramm 20">
+        <img src="diagramme/Nauderer, Maximilian.png" alt="Diagramm 21">
+        <img src="diagramme/Schulz, Alexander.png" alt="Diagramm 22">
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.content-section');
+    
+        function hideAllSections() {
+            contentSections.forEach(section => {
+                section.style.display = 'none';
+            });
+        }
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                hideAllSections();
+                const targetId = this.getAttribute('data-target');
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.style.display = 'block';
+                }
+            });
+        });
+    });
+  </script>
+      
+      
+
 </body>
 </html>
