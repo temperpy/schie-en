@@ -4,14 +4,14 @@ body, html {
     width: 100%;
     height: 100%;
     background-color: black;
-    color: white /* Setzt Standardfarbe für Text auf Weiß */
+    color: white;
 }
 
 .content-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Ändern Sie dies bei Bedarf */
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -19,49 +19,60 @@ img {
     max-width: 100%;
     max-height: 90vh;
     height: auto;
-    margin: 0 auto; /* Zentriert das Bild horizontal */
-    display: block; /* Damit `margin: auto` funktioniert */
+    margin: 0 auto;
+    display: block;
     margin-bottom: 20px;
 }
 
 #home {
-    color: white; /* Setzt die Textfarbe auf Weiß */
-    font-size: 24px; /* Erhöht die Schriftgröße */
-    text-align: center; /* Zentriert den Text horizontal */
-    width: 100%; /* Stellt sicher, dass der Div die volle Breite einnimmt */
-    margin-top: 20px; /* Fügt oben einen Abstand hinzu, optional */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
-/* Hier beginnen die neuen CSS-Regeln für die Navigationsleiste */
 #navbar {
     display: flex;
-    justify-content: center; /* Zentriert die Inhalte horizontal */
-    align-items: center; /* Zentriert die Inhalte vertikal (falls nötig) */
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    background-color: #333; /* Dunkler Hintergrund für die Leiste */
-    position: fixed; /* Fixiert die Leiste am oberen Rand */
+    background-color: #333;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Stellt sicher, dass die Leiste über anderen Elementen liegt */
+    z-index: 1000;
 }
-
 
 #navbar a {
     display: block;
-    color: white; /* Schriftfarbe */
+    color: white;
     text-align: center;
-    padding: 14px 16px; /* Innenabstand */
-    text-decoration: none; /* Entfernt Unterstreichungen */
-    font-size: 17px; /* Schriftgröße */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
-
 
 #navbar a:hover {
-    background-color: #ddd; /* Hintergrundfarbe beim Hover */
-    color: black; /* Schriftfarbe beim Hover */
+    background-color: #ddd;
+    color: black;
 }
 
-/* Fügt Platz oben auf der Seite hinzu, damit der Inhalt nicht von der Navigationsleiste verdeckt wird */
 body {
     padding-top: 50px;
+}
+
+#content {
+    margin-top: 60px; /* Passt den oberen Abstand an */
+}
+
+/* Responsive Design Anpassungen */
+@media (max-width: 768px) {
+    #navbar a {
+        padding: 10px 8px; /* Verringert den Innenabstand */
+        font-size: 14px; /* Verringert die Schriftgröße */
+    }
+    #content {
+        margin-top: 50px; /* Verringert den Abstand für kleinere Bildschirme */
+    }
 }
